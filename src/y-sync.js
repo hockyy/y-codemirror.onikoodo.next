@@ -141,7 +141,8 @@ class YSyncPluginValue {
        */
       let adj = 0
       update.changes.iterChanges((fromA, toA, fromB, toB, insert) => {
-        const insertText = insert.sliceString(0, insert.length, '\n')
+        const insertText = insert.sliceString(0, insert.length, '\n');
+        console.log(insertText)
         if (fromA !== toA) {
           ytext.delete(fromA + adj, toA - fromA)
         }
